@@ -17,7 +17,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:gh": "PUBLIC_URL=/react-build-once react-scripts build",
-    "deploy:gh": "gh-pages -d build"
+    "prepare:gh": "cp deploy/github.env.js build/env.js",
+    "deploy:gh": "npm run prepare:gh && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

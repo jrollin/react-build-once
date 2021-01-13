@@ -1,22 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { EnvConfig } from './EnvConfig';
+
+const config = new EnvConfig() 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>Your app is running!</h2>
+        <p>Env name is : { config.envName}</p>
+        <p>API URL is : { config.apiUrl}</p>
       </header>
     </div>
   );
